@@ -1,0 +1,8 @@
+{
+    entry = {
+        bundle = "LockColorSwitch";
+        cell = PSLinkCell;
+        isController = 1;
+        label = "文字深浅切换";
+    };
+}
