@@ -1,0 +1,9 @@
+Package: com.lockcolorswitch.tweak
+Name: LockColorSwitch
+Version: 0.1.0
+Architecture: iphoneos-arm64e
+Description: Lock-screen foreground color switch for RootHide
+Maintainer: LockColorSwitch
+Author: LockColorSwitch
+Section: Tweaks
+Depends: mobilesubstrate
