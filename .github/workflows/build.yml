@@ -1,0 +1,34 @@
+name: Build RootHide Deb
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Theos
+        uses: iossxx/theos-action@v1
+        with:
+          theos-dir: theos
+          theos-src: https://github.com/roothide/theos
+          theos-sdks: https://github.com/theos/sdks
+          theos-sdks-branch: master
+
+      - name: Build RootHide package
+        env:
+          THEOS: ${{ github.workspace }}/theos
+        run: |
+          make clean
+          make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=roothide
+
+      - name: Upload DEB
+        uses: actions/upload-artifact@v4
+        with:
+          name: LockColorSwitch-roothide-deb
+          path: packages/*.deb
+          if-no-files-found: error
