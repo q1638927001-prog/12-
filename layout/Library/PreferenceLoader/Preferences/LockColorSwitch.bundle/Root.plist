@@ -1,0 +1,38 @@
+{
+    PreferenceSpecifiers = (
+        {
+            Type = PSGroupSpecifier;
+            Label = "颜色";
+        },
+        {
+            Type = PSToggleSwitchSpecifier;
+            Title = "启用";
+            Key = "enabled";
+            DefaultValue = YES;
+        },
+        {
+            Type = PSRadioGroupSpecifier;
+            Title = "通知";
+            Key = "notificationMode";
+            DefaultValue = 0;
+            ValidValues = (0, 1, 2);
+            ValidTitles = ("默认", "纯白", "纯黑");
+        },
+        {
+            Type = PSRadioGroupSpecifier;
+            Title = "播放器";
+            Key = "playerMode";
+            DefaultValue = 0;
+            ValidValues = (0, 1, 2);
+            ValidTitles = ("默认", "纯白", "纯黑");
+        },
+        {
+            Type = PSRadioGroupSpecifier;
+            Title = "实时活动";
+            Key = "liveActivityMode";
+            DefaultValue = 0;
+            ValidValues = (0, 1, 2);
+            ValidTitles = ("默认", "纯白", "纯黑");
+        }
+    );
+}
