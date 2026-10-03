@@ -12,16 +12,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install Theos
-        uses: iossxx/theos-action@v1
+        uses: waruhachi/theos-action@v2.6.3
         with:
-          theos-dir: theos
-          theos-src: https://github.com/roothide/theos
-          theos-sdks: https://github.com/theos/sdks
-          theos-sdks-branch: master
+          theos-src: roothide/theos
+          theos-branch: master
+          sdks-src: theos/sdks
+          sdks-branch: master
 
       - name: Build RootHide package
-        env:
-          THEOS: ${{ github.workspace }}/theos
         run: |
           make clean
           make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=roothide
