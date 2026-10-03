@@ -1,0 +1,39 @@
+{
+    PreferenceSpecifiers = (
+        {
+            Type = PSGroupSpecifier;
+            Label = "LockColorSwitch";
+        },
+        {
+            Type = PSToggleSwitchSpecifier;
+            Title = "启用";
+            Key = "enabled";
+            DefaultValue = YES;
+        },
+        {
+            Type = PSRadioGroupSpecifier;
+            Title = "锁屏通知";
+            Key = "notificationMode";
+            DefaultValue = 0;
+            ValidValues = (0, 1, 2);
+            ValidTitles = ("默认", "纯白", "纯黑");
+        },
+        {
+            Type = PSRadioGroupSpecifier;
+            Title = "锁屏播放器";
+            Key = "playerMode";
+            DefaultValue = 0;
+            ValidValues = (0, 1, 2);
+            ValidTitles = ("默认", "纯白", "纯黑");
+        },
+        {
+            Type = PSRadioGroupSpecifier;
+            Title = "锁屏实时活动";
+            Key = "liveActivityMode";
+            DefaultValue = 0;
+            ValidValues = (0, 1, 2);
+            ValidTitles = ("默认", "纯白", "纯黑");
+        }
+    );
+    Title = "LockColorSwitch";
+}
